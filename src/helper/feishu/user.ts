@@ -1,6 +1,7 @@
 import { methodV } from 'src/utils/request';
 
 export const getUserInfo = async (user_token: string) => {
+  console.log(user_token)
   const { data } = await methodV({
     url: `/authen/v1/user_info`,
     method: 'GET',
@@ -8,21 +9,22 @@ export const getUserInfo = async (user_token: string) => {
       Authorization: `Bearer ${user_token}`,
     },
   });
+  console.log(data);
   return data;
 };
 
 /**
  * 获取通信录单个用户信息
- * @param feishuUserId
+ * @param feishuUnionId
  * @param user_token
  * @returns
  */
 export const getSingleUserInfo = async (
-  feishuUserId: string,
+  feishuUnionId: string,
   token: string,
 ) => {
   const { data } = await methodV({
-    url: `/contact/v3/users/${feishuUserId}`,
+    url: `/contact/v3/users/${feishuUnionId}`,
     method: 'GET',
     query: {
       user_id_type: 'user_id',

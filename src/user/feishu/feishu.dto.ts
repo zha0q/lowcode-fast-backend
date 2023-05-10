@@ -38,6 +38,5 @@ export class FeishuUserInfo {
   mobile: string;
   enName: string;
   name: string;
-  feishuUserId: string;
   feishuUnionId: string;
 }

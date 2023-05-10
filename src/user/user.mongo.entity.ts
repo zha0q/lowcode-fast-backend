@@ -10,6 +10,9 @@ export class User {
   @ObjectIdColumn()
   id?: number;
 
+  @ObjectIdColumn()
+  _id?: string;
+
   @Column({ default: null })
   name: string;
 
@@ -39,9 +42,6 @@ export class User {
 
   @Column({ default: null })
   feishuUnionId?: string;
-
-  @Column({ default: null })
-  feishuUserId?: string;
 
   @Column({ default: null })
   departmentName?: string;

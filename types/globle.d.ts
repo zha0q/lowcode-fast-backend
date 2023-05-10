@@ -24,7 +24,7 @@ declare type Payload = {
   name: string;
   email: string;
   feishuAccessToken: string;
-  feishuUserId: string;
+  feishuUnionId: string;
   department?: string;
   departmentId?: string;
 };

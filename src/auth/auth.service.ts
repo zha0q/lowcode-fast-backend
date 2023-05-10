@@ -31,7 +31,7 @@ export class AuthService {
       name: user.name,
       email: user.email,
       feishuAccessToken: feishuInfo.accessToken,
-      feishuUserId: feishuInfo.feishuUserId,
+      feishuUnionId: feishuInfo.feishuUnionId,
     };
   }
 
@@ -56,7 +56,6 @@ export class AuthService {
       mobile: data.mobile,
       name: data.name,
       feishuUnionId: data.union_id,
-      feishuUserId: data.user_id,
     };
     return feishuInfo;
   }

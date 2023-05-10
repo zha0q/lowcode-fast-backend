@@ -45,6 +45,9 @@ async function bootstrap() {
   // 启动全局字段校验，保证请求接口字段校验正确。
   app.useGlobalPipes(new ValidationPipe());
 
+  // 添加api前缀
+  app.setGlobalPrefix('api');
+
   // 创建文档
   generateDocument(app)
 

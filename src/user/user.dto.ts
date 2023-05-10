@@ -16,3 +16,9 @@ export class AddUserDto {
   @IsNotEmpty()
   username: string;
 }
+
+export class GetUserInfoDto {
+  @IsNotEmpty()
+  @ApiProperty({ example: 'xxxx', description: 'userId' })
+  feishuUnionId: string;
+}
